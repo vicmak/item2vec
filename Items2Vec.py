@@ -144,7 +144,7 @@ def trainModel(train_file, vocab_size):
     model = Sequential()
     model.add(Embedding(vocab_size, 10, input_length=20))
     model.add(Bidirectional(LSTM(64)))
-    model.add(Dense(10, activation='sigmoid'))
+    model.add(Dense(10, activation='linear'))
 
     print("compile..")
     model.compile('adam', 'mse')
